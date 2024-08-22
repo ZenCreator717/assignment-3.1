@@ -1,0 +1,62 @@
+<!--assignment 1.3 by Isabella Denz-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"href="strings.css">
+    <title>
+        Palindrome Checker
+    </title>
+   
+</head>
+<body>
+   <center> <h1>Palindrome Checker</h1></center>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <center> <button onclick="checkPalindrome()">Enter a String</button></center>
+
+    <script>
+        function checkPalindrome() {
+            let continueChecking = true;
+
+            while (continueChecking) {
+                let userInput = prompt("Enter a string to check if it's a palindrome:");
+
+                if (userInput === null) {
+                    break; // Exit the loop if the user cancels the prompt
+                }
+
+                let cleanedInput = userInput.replace(/[^A-Za-z0-9]/g, '').toLowerCase();
+                let reversedInput = cleanedInput.split('').reverse().join('');
+
+                if (cleanedInput === reversedInput) {
+                    alert(`"${userInput}" is a palindrome!`);
+                } else {
+                    alert(`"${userInput}" is not a palindrome.`);
+                }
+
+                continueChecking = confirm("Do you want to check another string?");
+            }
+        }
+    </script>
+</body>
+</html>

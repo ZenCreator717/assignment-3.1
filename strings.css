@@ -1,0 +1,15 @@
+h1{
+    color: aqua;
+    text-shadow: 20px;
+    text-decoration: black;
+    border-color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 32px;
+    outline-style: solid;
+}
+
+body{
+background-image: url(gif-future-bk.gif);
+background-repeat: no-repeat;
+background-size: cover;
+}
