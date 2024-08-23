@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet"href="strings.css">
+    <link rel="stylesheet" href="strings.js">
     <title>
         Palindrome Checker
     </title>
@@ -33,30 +34,23 @@
    <br>
    <br>
    <center> <button onclick="checkPalindrome()">Enter a String</button></center>
-
-    <script>
-        function checkPalindrome() {
-            let continueChecking = true;
-
-            while (continueChecking) {
-                let userInput = prompt("Enter a string to check if it's a palindrome:");
-
-                if (userInput === null) {
-                    break; // Exit the loop if the user cancels the prompt
-                }
-
-                let cleanedInput = userInput.replace(/[^A-Za-z0-9]/g, '').toLowerCase();
-                let reversedInput = cleanedInput.split('').reverse().join('');
-
-                if (cleanedInput === reversedInput) {
-                    alert(`"${userInput}" is a palindrome!`);
-                } else {
-                    alert(`"${userInput}" is not a palindrome.`);
-                }
-
-                continueChecking = confirm("Do you want to check another string?");
-            }
-        }
-    </script>
+<br>
+<br>
+<br>
+   <form>
+       <center> <label for="firstname"> First Name: </label>
+        <input type="text" name="firstname" id="firstname" required maxlength="45"></center>
+        <br>
+        <center> <label for="lastname"> Last Name: </label> 
+        <input type="text" name="lastname" id="lastname" required maxlength="45"></center>
+        <br>
+        <center><button>Submit</button></center>
+        <br>
+        <center> <label for="zipcode"> zipcode: </label> 
+        <input type="text" name="zipcode" id="zipcode" required maxlength="45"></center>
+        <br>
+        <center><button>Submit</button></center>
+        </form>
+        <script src="strings.js" ></script>
 </body>
 </html>
